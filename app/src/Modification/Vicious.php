@@ -9,7 +9,7 @@ use Tournament\Contender\Contender;
 class Vicious implements Modification
 {
     private const ADDITIONAL_POISON_DAMAGE = 20;
-    private $usageLimit = 2;
+    private int $usageLimit = 2;
 
     public function damageLogic(Contender $contender): int
     {

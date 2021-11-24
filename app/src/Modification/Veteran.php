@@ -10,7 +10,7 @@ class Veteran implements Modification
 {
     private const BERSERK_DAMAGE_MULTIPLIER = 2;
     private const POINTS_PERCENTAGE_BERSERK = 30;
-    private $isBerserkActive = false;
+    private bool $isBerserkActive = false;
 
     public function damageLogic(Contender $contender): int
     {
@@ -25,7 +25,7 @@ class Veteran implements Modification
         return $damage;
     }
 
-    private function activateBerserkLogic(Contender $contender)
+    private function activateBerserkLogic(Contender $contender): void
     {
         $maxBerserkHitPoints = $contender->initialHitPoints() * (self::POINTS_PERCENTAGE_BERSERK / 100);
         if ($maxBerserkHitPoints >= $contender->hitPoints()) {

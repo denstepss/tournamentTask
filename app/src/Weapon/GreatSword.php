@@ -8,7 +8,7 @@ class GreatSword extends Weapon
 {
     private const DAMAGE = 12;
     private const INITIAL_ATTACK_CHARGE = 2;
-    private $attackCharge;
+    private int $attackCharge;
 
     public function __construct()
     {
